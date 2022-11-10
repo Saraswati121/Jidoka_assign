@@ -1,28 +1,28 @@
 //implementations of a class and ex. of inheritance.
 class Parent {
-    constructor(name,father){
-        this.name=name;
-        this.father=father;
+    constructor(fastname,lastname){
+        this.fastname=fastname;
+        this.lastname=lastname;
     }
-    sayHello(){
-        console.log(`Hello, my name is ${this.name} and I am ${this.father} years old.`)
+    sayHey(){
+        console.log(`Hello, my fastname is ${this.fastname} and my lastname is ${this.lastname}.`)
     }
 }
 
-const parent1= new Parent('Preeti','Jayant');
-parent1.sayHello();
+const parent1= new Parent('Saraswati','Panda');
+parent1.sayHey();
 
 //Inheritance
 class Child extends Parent {
-    constructor(name,father,mother){
-       super(name,father);
-       this.mother=mother;
+    constructor(fastname,lastname,father){
+       super(fastname,lastname);
+       this.father=father;
     }
-    sayHello(){
-        super.sayHello();
-        console.log(`My mother name is ${this.mother}`);
+    sayHey(){
+        super.sayHey();
+        console.log(`My father name is ${this.father}`);
     }
 }
 
- const child1=new Child('Preeti','Jayant',"Sabita");
- child1.sayHello();
+ const child1=new Child('Saraswati','Panda',"Bijaya");
+ child1.sayHey();
